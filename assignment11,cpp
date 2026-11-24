@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+template <typename t>
+void swapValue(t &a, t &b)
+{
+    t temp;
+    temp = a;
+    a = b;
+    b = temp;
+}
+
+int main()
+{
+    int emp1 = 10, emp2 = 20;
+    cout << "before swap:- " << emp1 << " " << emp2 << endl;
+    swapValue(emp1, emp2);
+    cout << "after swap:- " << emp1 << " " << emp2 << endl;
+
+    float room1= 1.1, room2 = 2.2;   
+    cout << "before swap:- " << room1 << " " << room2 << endl;
+    swapValue(room1, room2);    
+    cout << "after swap:- " << room1 << " " << room2 << endl;
+
+    string  task1= "washing", task2 = "eating";   
+    cout << "before swap:- " << task1 << " " << task2 << endl;
+    swapValue(task1, task2);     
+    cout << "after swap:- " << task1 << " " << task2 << endl;
+
+    return 0;
+}
